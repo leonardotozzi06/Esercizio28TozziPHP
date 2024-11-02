@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Prenotazione Ristorante</title>
+</head>
+<body>
+    <h1>Prenotazione al Ristorante</h1>
+    <form action="gestioneprenotazione.php" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+        
+        <label for="cognome">Cognome:</label>
+        <input type="text" id="cognome" name="cognome" required><br><br>
+        
+        <label for="tavolo">Numero del tavolo:</label>
+        <select id="tavolo" name="tavolo" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br><br>
+        
+        <label for="orario">Orario:</label>
+        <input type="time" id="orario" name="orario" required><br><br>
+        
+        <label for="note">Note:</label>
+        <textarea id="note" name="note"></textarea><br><br>
+        
+        <label>Pasti:</label><br>
+        <input type="checkbox" id="antipasto" name="pasti[]" value="antipasto">
+        <label for="antipasto">Antipasto</label><br>
+        <input type="checkbox" id="primo" name="pasti[]" value="primo">
+        <label for="primo">Primo</label><br>
+        <input type="checkbox" id="secondo" name="pasti[]" value="secondo">
+        <label for="secondo">Secondo</label><br><br>
+        
+        <label>Parcheggio:</label><br>
+        <input type="radio" id="custodito" name="parcheggio" value="custodito" required>
+        <label for="custodito">Custodito</label><br>
+        <input type="radio" id="non_custodito" name="parcheggio" value="non_custodito">
+        <label for="non_custodito">Non custodito</label><br>
+        <input type="radio" id="nessuno" name="parcheggio" value="nessuno">
+        <label for="nessuno">Nessuno</label><br><br>
+        
+        <input type="submit" value="Invia Prenotazione">
+    </form>
+</body>
+</html>
